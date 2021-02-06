@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3684198e-c582-4b5f-8e2a-bdc0b9380db8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite-gpu/headers/tensorflow/lite/delegates/gpu/delegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite-gpu/jni/arm64-v8a/libtensorflowlite_gpu_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite-gpu/jni/armeabi-v7a/libtensorflowlite_gpu_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite-gpu/jni/x86/libtensorflowlite_gpu_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite-gpu/jni/x86_64/libtensorflowlite_gpu_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/builtin_ops.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api_experimental.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/jni/arm64-v8a/libtensorflowlite_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/jni/armeabi-v7a/libtensorflowlite_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/jni/x86/libtensorflowlite_jni.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../super_resolution/android/libraries/tensorflowlite/jni/x86_64/libtensorflowlite_jni.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gesture_classification/android/app/src/main/res/layout/activity_camera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gesture_classification/android/app/src/main/res/layout/activity_camera.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gesture_classification/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../gesture_classification/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image_segmentation/android/app/src/main/res/layout/tfe_is_bottom_sheet_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../image_segmentation/android/app/src/main/res/layout/tfe_is_bottom_sheet_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/thumbnails/style9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/image_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/image_item.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RF8N91RNC8L]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1o34lSmfhHDZ8zpmeoEhi6dsujS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/assets/thumbnails" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Christopher\Desktop\Seminarios\examples\lite\examples\style_transfer\android\app\src\main\assets\thumbnails" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christopher\Desktop\Seminarios\examples\lite\examples\style_transfer\android\app\src\main\assets\thumbnails" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="TFLite_Style_Transfer_Demo_App.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3684198e-c582-4b5f-8e2a-bdc0b9380db8" name="Default Changelist" comment="" />
+      <created>1612502090350</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612502090350</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612503862340">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612503862340" />
+    <state x="221" y="0" key="CommitChangelistDialog2" timestamp="1612505007020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="221" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612505007020" />
+    <state x="147" y="64" key="DiffContextDialog" timestamp="1612504990811">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="64" key="DiffContextDialog/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504990811" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1612504737440">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504737440" />
+    <state width="1491" height="121" key="GridCell.Tab.0.bottom" timestamp="1612504051870">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="121" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504051870" />
+    <state width="1491" height="121" key="GridCell.Tab.0.center" timestamp="1612504051869">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="121" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504051869" />
+    <state width="1491" height="121" key="GridCell.Tab.0.left" timestamp="1612504051869">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="121" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504051869" />
+    <state width="1491" height="121" key="GridCell.Tab.0.right" timestamp="1612504051869">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1491" height="121" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504051869" />
+    <state x="647" y="132" key="RollbackChangesDialog" timestamp="1612505015742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="647" y="132" key="RollbackChangesDialog/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612505015742" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1612504864871">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504864871" />
+    <state x="579" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612504932033">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="579" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612504932033" />
+  </component>
+</project>

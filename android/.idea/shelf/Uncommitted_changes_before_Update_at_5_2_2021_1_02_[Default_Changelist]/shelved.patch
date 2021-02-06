@@ -1,0 +1,1671 @@
+Index: app/src/main/res/layout/image_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"wrap_content\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <ImageView\r\n        android:id=\"@+id/image_view\"\r\n        android:layout_width=\"150dp\"\r\n        android:layout_height=\"150dp\"\r\n        android:padding=\"0dp\"\r\n        android:scaleType=\"centerCrop\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintDimensionRatio=\"W,1:1\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        tools:srcCompat=\"@tools:sample/backgrounds/scenic\" />\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/image_item.xml	(revision 0913b85a5f9c87fb9fc07e393ee5193c16cc0837)
++++ app/src/main/res/layout/image_item.xml	(date 1612503585561)
+@@ -8,14 +8,16 @@
+ 
+     <ImageView
+         android:id="@+id/image_view"
+-        android:layout_width="150dp"
+-        android:layout_height="150dp"
++        android:layout_width="300dp"
++        android:layout_height="246dp"
+         android:padding="0dp"
+         android:scaleType="centerCrop"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintDimensionRatio="W,1:1"
+         app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.0"
+         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\"org.tensorflow.lite.examples.styletransfer.MainActivity\">\r\n\r\n    <androidx.appcompat.widget.Toolbar\r\n        android:id=\"@+id/toolbar\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"?attr/actionBarSize\"\r\n        android:background=\"@android:color/white\">\r\n\r\n        <ImageView\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:src=\"@drawable/tfl2_logo_dark\" />\r\n    </androidx.appcompat.widget.Toolbar>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:gravity=\"center_horizontal\"\r\n        android:orientation=\"vertical\"\r\n        android:paddingTop=\"?attr/actionBarSize\">\r\n\r\n      <LinearLayout\r\n          android:layout_width=\"wrap_content\"\r\n          android:layout_height=\"wrap_content\"\r\n          android:gravity=\"center_horizontal\">\r\n\r\n        <FrameLayout\r\n            android:id=\"@+id/view_finder\"\r\n            android:layout_width=\"300dp\"\r\n            android:layout_height=\"300dp\"\r\n            android:paddingTop=\"16dp\" />\r\n      </LinearLayout>\r\n\r\n        <HorizontalScrollView\r\n            android:id=\"@+id/horizontal_scroll_view\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:orientation=\"horizontal\">\r\n\r\n                <ImageView\r\n                    android:id=\"@+id/original_imageview\"\r\n                    android:layout_width=\"@dimen/previewSize\"\r\n                    android:layout_height=\"@dimen/previewSize\"\r\n                    android:padding=\"4dp\"\r\n                    android:src=\"@android:drawable/ic_menu_camera\" />\r\n\r\n                <FrameLayout\r\n                    android:layout_width=\"@dimen/previewSize\"\r\n                    android:layout_height=\"@dimen/previewSize\">\r\n\r\n                    <ImageView\r\n                        android:id=\"@+id/style_imageview\"\r\n                        android:layout_width=\"@dimen/previewSize\"\r\n                        android:layout_height=\"@dimen/previewSize\"\r\n                        android:padding=\"4dp\"\r\n                        android:src=\"@drawable/styles_square_thumb\" />\r\n\r\n                    <TextView\r\n                        android:id=\"@+id/choose_style_text_view\"\r\n                        android:layout_width=\"match_parent\"\r\n                        android:layout_height=\"match_parent\"\r\n                        android:background=\"@color/semi_transparent\"\r\n                        android:gravity=\"center\"\r\n                        android:text=\"@string/choose_a_style\"\r\n                        android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\r\n                        android:textColor=\"@android:color/white\"\r\n                        android:textSize=\"24sp\"\r\n                        android:textStyle=\"bold\" />\r\n                </FrameLayout>\r\n\r\n                <FrameLayout\r\n                    android:layout_width=\"@dimen/previewSize\"\r\n                    android:layout_height=\"@dimen/previewSize\">\r\n\r\n                    <ProgressBar\r\n                        android:id=\"@+id/progress_circular\"\r\n                        android:layout_width=\"wrap_content\"\r\n                        android:layout_height=\"wrap_content\"\r\n                        android:layout_gravity=\"center\" />\r\n\r\n                    <ImageView\r\n                        android:id=\"@+id/result_imageview\"\r\n                        android:layout_width=\"@dimen/previewSize\"\r\n                        android:layout_height=\"@dimen/previewSize\"\r\n                        android:padding=\"4dp\" />\r\n                </FrameLayout>\r\n\r\n            </LinearLayout>\r\n        </HorizontalScrollView>\r\n\r\n    </LinearLayout>\r\n\r\n    <include layout=\"@layout/bottom_sheet_layout\" />\r\n\r\n    <com.google.android.material.floatingactionbutton.FloatingActionButton\r\n        android:id=\"@+id/capture_button\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_margin=\"16dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        android:clickable=\"true\"\r\n        app:backgroundTint=\"@color/colorPrimaryDark\"\r\n        app:layout_anchor=\"@id/bottom_sheet\"\r\n        app:layout_anchorGravity=\"top|end\"\r\n        app:srcCompat=\"@android:drawable/ic_menu_camera\" />\r\n\r\n    <View\r\n        android:id=\"@+id/dummy\"\r\n        android:layout_width=\"1dp\"\r\n        android:layout_height=\"80dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        app:layout_anchor=\"@id/capture_button\"\r\n        app:layout_anchorGravity=\"top|right|end\" />\r\n\r\n    <com.google.android.material.floatingactionbutton.FloatingActionButton\r\n        android:id=\"@+id/toggle_button\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_margin=\"16dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        android:clickable=\"true\"\r\n        app:backgroundTint=\"@color/colorPrimaryDark\"\r\n        app:layout_anchor=\"@id/dummy\"\r\n        app:layout_anchorGravity=\"top|end\"\r\n        app:srcCompat=\"@android:drawable/ic_popup_sync\" />\r\n</androidx.coordinatorlayout.widget.CoordinatorLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 0913b85a5f9c87fb9fc07e393ee5193c16cc0837)
++++ app/src/main/res/layout/activity_main.xml	(date 1612504396712)
+@@ -12,10 +12,7 @@
+         android:layout_height="?attr/actionBarSize"
+         android:background="@android:color/white">
+ 
+-        <ImageView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:src="@drawable/tfl2_logo_dark" />
++
+     </androidx.appcompat.widget.Toolbar>
+ 
+     <LinearLayout
+@@ -25,7 +22,7 @@
+         android:orientation="vertical"
+         android:paddingTop="?attr/actionBarSize">
+ 
+-      <LinearLayout
++        <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal">
+@@ -71,7 +68,7 @@
+                         android:layout_height="match_parent"
+                         android:background="@color/semi_transparent"
+                         android:gravity="center"
+-                        android:text="@string/choose_a_style"
++                        android:text="ESCOGER ARTE"
+                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                         android:textColor="@android:color/white"
+                         android:textSize="24sp"
+@@ -133,4 +130,15 @@
+         app:layout_anchor="@id/dummy"
+         app:layout_anchorGravity="top|end"
+         app:srcCompat="@android:drawable/ic_popup_sync" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="match_parent"
++        android:layout_height="36dp"
++        android:text="PROYECTO FINAL"
++        android:textAlignment="center"
++        android:textSize="30sp"
++        android:textStyle="bold|italic"
++        app:layout_anchor="@+id/toolbar"
++        app:layout_anchorGravity="center" />
+ </androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: ../../gesture_classification/android/app/src/main/res/layout/activity_camera.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?><!--\r\n Copyright 2019 The Android Open Source Project\r\n\r\n Licensed under the Apache License, Version 2.0 (the \"License\");\r\n you may not use this file except in compliance with the License.\r\n You may obtain a copy of the License at\r\n\r\n     http://www.apache.org/licenses/LICENSE-2.0\r\n\r\n Unless required by applicable law or agreed to in writing, software\r\n distributed under the License is distributed on an \"AS IS\" BASIS,\r\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n See the License for the specific language governing permissions and\r\n limitations under the License.\r\n-->\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\"org.tensorflow.lite.examples.gesture.CameraActivity\">\r\n\r\n    <FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n        xmlns:tools=\"http://schemas.android.com/tools\"\r\n        android:id=\"@+id/container\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"#000\" />\r\n\r\n    <RelativeLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"60dp\"\r\n        android:gravity=\"center_vertical\">\r\n\r\n        <View\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:alpha=\".5\"\r\n            android:background=\"@android:color/black\" />\r\n\r\n        <ImageView\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_centerVertical=\"true\"\r\n            android:layout_marginLeft=\"10dp\"\r\n            android:src=\"@drawable/tensorflow_logo\" />\r\n    </RelativeLayout>\r\n</FrameLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../gesture_classification/android/app/src/main/res/layout/activity_camera.xml	(revision 0913b85a5f9c87fb9fc07e393ee5193c16cc0837)
++++ ../../gesture_classification/android/app/src/main/res/layout/activity_camera.xml	(date 1612497332463)
+@@ -19,12 +19,23 @@
+     android:layout_height="match_parent"
+     tools:context="org.tensorflow.lite.examples.gesture.CameraActivity">
+ 
+-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-        xmlns:tools="http://schemas.android.com/tools"
++    <FrameLayout
+         android:id="@+id/container"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:background="#000" />
++        android:background="#000" >
++
++        <TextView
++            android:id="@+id/textView2"
++            android:layout_width="match_parent"
++            android:layout_height="40dp"
++            android:text="Proyecto Final"
++            android:textAlignment="center"
++            android:textAllCaps="true"
++            android:textColor="#FDFDFD"
++            android:textSize="36sp"
++            android:textStyle="bold" />
++    </FrameLayout>
+ 
+     <RelativeLayout
+         android:layout_width="match_parent"
+@@ -37,11 +48,5 @@
+             android:alpha=".5"
+             android:background="@android:color/black" />
+ 
+-        <ImageView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_centerVertical="true"
+-            android:layout_marginLeft="10dp"
+-            android:src="@drawable/tensorflow_logo" />
+     </RelativeLayout>
+ </FrameLayout>
+Index: ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/common.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/common.h	(date 1612225029932)
++++ ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/common.h	(date 1612225029932)
+@@ -0,0 +1,828 @@
++/* Copyright 2019 The TensorFlow Authors. All Rights Reserved.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++==============================================================================*/
++
++// This file defines common C types and APIs for implementing operations,
++// delegates and other constructs in TensorFlow Lite. The actual operations and
++// delegates can be defined using C++, but the interface between the interpreter
++// and the operations are C.
++//
++// Summary of abstractions
++// TF_LITE_ENSURE - Self-sufficient error checking
++// TfLiteStatus - Status reporting
++// TfLiteIntArray - stores tensor shapes (dims),
++// TfLiteContext - allows an op to access the tensors
++// TfLiteTensor - tensor (a multidimensional array)
++// TfLiteNode - a single node or operation
++// TfLiteRegistration - the implementation of a conceptual operation.
++// TfLiteDelegate - allows delegation of nodes to alternative backends.
++//
++// Some abstractions in this file are created and managed by Interpreter.
++//
++// NOTE: The order of values in these structs are "semi-ABI stable". New values
++// should be added only to the end of structs and never reordered.
++
++#ifndef TENSORFLOW_LITE_C_COMMON_H_
++#define TENSORFLOW_LITE_C_COMMON_H_
++
++#include <stdbool.h>
++#include <stddef.h>
++#include <stdint.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif  // __cplusplus
++
++typedef enum TfLiteStatus {
++  kTfLiteOk = 0,
++  kTfLiteError = 1,
++  kTfLiteDelegateError = 2
++} TfLiteStatus;
++
++// The list of external context types known to TF Lite. This list exists solely
++// to avoid conflicts and to ensure ops can share the external contexts they
++// need. Access to the external contexts is controlled by one of the
++// corresponding support files.
++typedef enum TfLiteExternalContextType {
++  kTfLiteEigenContext = 0,       // include eigen_support.h to use.
++  kTfLiteGemmLowpContext = 1,    // include gemm_support.h to use.
++  kTfLiteEdgeTpuContext = 2,     // Placeholder for Edge TPU support.
++  kTfLiteCpuBackendContext = 3,  // include cpu_backend_context.h to use.
++  kTfLiteMaxExternalContexts = 4
++} TfLiteExternalContextType;
++
++// Forward declare so dependent structs and methods can reference these types
++// prior to the struct definitions.
++struct TfLiteContext;
++struct TfLiteDelegate;
++struct TfLiteRegistration;
++
++// An external context is a collection of information unrelated to the TF Lite
++// framework, but useful to a subset of the ops. TF Lite knows very little
++// about about the actual contexts, but it keeps a list of them, and is able to
++// refresh them if configurations like the number of recommended threads
++// change.
++typedef struct TfLiteExternalContext {
++  TfLiteExternalContextType type;
++  TfLiteStatus (*Refresh)(struct TfLiteContext* context);
++} TfLiteExternalContext;
++
++#define kTfLiteOptionalTensor (-1)
++
++// Fixed size list of integers. Used for dimensions and inputs/outputs tensor
++// indices
++typedef struct TfLiteIntArray {
++  int size;
++// gcc 6.1+ have a bug where flexible members aren't properly handled
++// https://github.com/google/re2/commit/b94b7cd42e9f02673cd748c1ac1d16db4052514c
++#if (!defined(__clang__) && defined(__GNUC__) && __GNUC__ == 6 && \
++     __GNUC_MINOR__ >= 1) ||                                      \
++    defined(HEXAGON)
++  int data[0];
++#else
++  int data[];
++#endif
++} TfLiteIntArray;
++
++// Given the size (number of elements) in a TfLiteIntArray, calculate its size
++// in bytes.
++int TfLiteIntArrayGetSizeInBytes(int size);
++
++#ifndef TF_LITE_STATIC_MEMORY
++// Create a array of a given `size` (uninitialized entries).
++// This returns a pointer, that you must free using TfLiteIntArrayFree().
++TfLiteIntArray* TfLiteIntArrayCreate(int size);
++#endif
++
++// Check if two intarrays are equal. Returns 1 if they are equal, 0 otherwise.
++int TfLiteIntArrayEqual(const TfLiteIntArray* a, const TfLiteIntArray* b);
++
++// Check if an intarray equals an array. Returns 1 if equals, 0 otherwise.
++int TfLiteIntArrayEqualsArray(const TfLiteIntArray* a, int b_size,
++                              const int b_data[]);
++
++#ifndef TF_LITE_STATIC_MEMORY
++// Create a copy of an array passed as `src`.
++// You are expected to free memory with TfLiteIntArrayFree
++TfLiteIntArray* TfLiteIntArrayCopy(const TfLiteIntArray* src);
++
++// Free memory of array `a`.
++void TfLiteIntArrayFree(TfLiteIntArray* a);
++#endif  // TF_LITE_STATIC_MEMORY
++
++// Fixed size list of floats. Used for per-channel quantization.
++typedef struct TfLiteFloatArray {
++  int size;
++// gcc 6.1+ have a bug where flexible members aren't properly handled
++// https://github.com/google/re2/commit/b94b7cd42e9f02673cd748c1ac1d16db4052514c
++// This also applies to the toolchain used for Qualcomm Hexagon DSPs.
++#if !defined(__clang__) && defined(__GNUC__) && __GNUC__ == 6 && \
++    __GNUC_MINOR__ >= 1
++  float data[0];
++#else
++  float data[];
++#endif
++} TfLiteFloatArray;
++
++// Given the size (number of elements) in a TfLiteFloatArray, calculate its size
++// in bytes.
++int TfLiteFloatArrayGetSizeInBytes(int size);
++
++#ifndef TF_LITE_STATIC_MEMORY
++// Create a array of a given `size` (uninitialized entries).
++// This returns a pointer, that you must free using TfLiteFloatArrayFree().
++TfLiteFloatArray* TfLiteFloatArrayCreate(int size);
++
++// Free memory of array `a`.
++void TfLiteFloatArrayFree(TfLiteFloatArray* a);
++#endif  // TF_LITE_STATIC_MEMORY
++
++// Since we must not depend on any libraries, define a minimal subset of
++// error macros while avoiding names that have pre-conceived meanings like
++// assert and check.
++
++// Try to make all reporting calls through TF_LITE_KERNEL_LOG rather than
++// calling the context->ReportError function directly, so that message strings
++// can be stripped out if the binary size needs to be severely optimized.
++#ifndef TF_LITE_STRIP_ERROR_STRINGS
++#define TF_LITE_KERNEL_LOG(context, ...)            \
++  do {                                              \
++    (context)->ReportError((context), __VA_ARGS__); \
++  } while (false)
++
++#define TF_LITE_MAYBE_KERNEL_LOG(context, ...)        \
++  do {                                                \
++    if ((context) != nullptr) {                       \
++      (context)->ReportError((context), __VA_ARGS__); \
++    }                                                 \
++  } while (false)
++#else  // TF_LITE_STRIP_ERROR_STRINGS
++#define TF_LITE_KERNEL_LOG(context, ...)
++#define TF_LITE_MAYBE_KERNEL_LOG(context, ...)
++#endif  // TF_LITE_STRIP_ERROR_STRINGS
++
++// Check whether value is true, and if not return kTfLiteError from
++// the current function (and report the error string msg).
++#define TF_LITE_ENSURE_MSG(context, value, msg)        \
++  do {                                                 \
++    if (!(value)) {                                    \
++      TF_LITE_KERNEL_LOG((context), __FILE__ " " msg); \
++      return kTfLiteError;                             \
++    }                                                  \
++  } while (0)
++
++// Check whether the value `a` is true, and if not return kTfLiteError from
++// the current function, while also reporting the location of the error.
++#define TF_LITE_ENSURE(context, a)                                      \
++  do {                                                                  \
++    if (!(a)) {                                                         \
++      TF_LITE_KERNEL_LOG((context), "%s:%d %s was not true.", __FILE__, \
++                         __LINE__, #a);                                 \
++      return kTfLiteError;                                              \
++    }                                                                   \
++  } while (0)
++
++#define TF_LITE_ENSURE_STATUS(a) \
++  do {                           \
++    const TfLiteStatus s = (a);  \
++    if (s != kTfLiteOk) {        \
++      return s;                  \
++    }                            \
++  } while (0)
++
++// Check whether the value `a == b` is true, and if not return kTfLiteError from
++// the current function, while also reporting the location of the error.
++// `a` and `b` may be evaluated more than once, so no side effects or
++// extremely expensive computations should be done.
++// NOTE: Use TF_LITE_ENSURE_TYPES_EQ if comparing TfLiteTypes.
++#define TF_LITE_ENSURE_EQ(context, a, b)                                   \
++  do {                                                                     \
++    if ((a) != (b)) {                                                      \
++      TF_LITE_KERNEL_LOG((context), "%s:%d %s != %s (%d != %d)", __FILE__, \
++                         __LINE__, #a, #b, (a), (b));                      \
++      return kTfLiteError;                                                 \
++    }                                                                      \
++  } while (0)
++
++#define TF_LITE_ENSURE_TYPES_EQ(context, a, b)                             \
++  do {                                                                     \
++    if ((a) != (b)) {                                                      \
++      TF_LITE_KERNEL_LOG((context), "%s:%d %s != %s (%s != %s)", __FILE__, \
++                         __LINE__, #a, #b, TfLiteTypeGetName(a),           \
++                         TfLiteTypeGetName(b));                            \
++      return kTfLiteError;                                                 \
++    }                                                                      \
++  } while (0)
++
++#define TF_LITE_ENSURE_OK(context, status) \
++  do {                                     \
++    const TfLiteStatus s = (status);       \
++    if ((s) != kTfLiteOk) {                \
++      return s;                            \
++    }                                      \
++  } while (0)
++
++// Single-precision complex data type compatible with the C99 definition.
++typedef struct TfLiteComplex64 {
++  float re, im;  // real and imaginary parts, respectively.
++} TfLiteComplex64;
++
++// Half precision data type compatible with the C99 definition.
++typedef struct TfLiteFloat16 {
++  uint16_t data;
++} TfLiteFloat16;
++
++// Types supported by tensor
++typedef enum {
++  kTfLiteNoType = 0,
++  kTfLiteFloat32 = 1,
++  kTfLiteInt32 = 2,
++  kTfLiteUInt8 = 3,
++  kTfLiteInt64 = 4,
++  kTfLiteString = 5,
++  kTfLiteBool = 6,
++  kTfLiteInt16 = 7,
++  kTfLiteComplex64 = 8,
++  kTfLiteInt8 = 9,
++  kTfLiteFloat16 = 10,
++  kTfLiteFloat64 = 11,
++} TfLiteType;
++
++// Return the name of a given type, for error reporting purposes.
++const char* TfLiteTypeGetName(TfLiteType type);
++
++// SupportedQuantizationTypes.
++typedef enum TfLiteQuantizationType {
++  // No quantization.
++  kTfLiteNoQuantization = 0,
++  // Affine quantization (with support for per-channel quantization).
++  // Corresponds to TfLiteAffineQuantization.
++  kTfLiteAffineQuantization = 1,
++} TfLiteQuantizationType;
++
++// Structure specifying the quantization used by the tensor, if-any.
++typedef struct TfLiteQuantization {
++  // The type of quantization held by params.
++  TfLiteQuantizationType type;
++  // Holds a reference to one of the quantization param structures specified
++  // below.
++  void* params;
++} TfLiteQuantization;
++
++// Legacy. Will be deprecated in favor of TfLiteAffineQuantization.
++// If per-layer quantization is specified this field will still be populated in
++// addition to TfLiteAffineQuantization.
++// Parameters for asymmetric quantization. Quantized values can be converted
++// back to float using:
++//     real_value = scale * (quantized_value - zero_point)
++typedef struct TfLiteQuantizationParams {
++  float scale;
++  int32_t zero_point;
++} TfLiteQuantizationParams;
++
++// Parameters for asymmetric quantization across a dimension (i.e per output
++// channel quantization).
++// quantized_dimension specifies which dimension the scales and zero_points
++// correspond to.
++// For a particular value in quantized_dimension, quantized values can be
++// converted back to float using:
++//     real_value = scale * (quantized_value - zero_point)
++typedef struct TfLiteAffineQuantization {
++  TfLiteFloatArray* scale;
++  TfLiteIntArray* zero_point;
++  int32_t quantized_dimension;
++} TfLiteAffineQuantization;
++
++/* A union of pointers that points to memory for a given tensor. */
++typedef union TfLitePtrUnion {
++  /* Do not access these members directly, if possible, use
++   * GetTensorData<TYPE>(tensor) instead, otherwise only access .data, as other
++   * members are deprecated. */
++  int32_t* i32;
++  int64_t* i64;
++  float* f;
++  TfLiteFloat16* f16;
++  char* raw;
++  const char* raw_const;
++  uint8_t* uint8;
++  bool* b;
++  int16_t* i16;
++  TfLiteComplex64* c64;
++  int8_t* int8;
++  /* Only use this member. */
++  void* data;
++} TfLitePtrUnion;
++
++// Memory allocation strategies.
++//  * kTfLiteMmapRo: Read-only memory-mapped data, or data externally allocated.
++//  * kTfLiteArenaRw: Arena allocated with no guarantees about persistence,
++//        and available during eval.
++//  * kTfLiteArenaRwPersistent: Arena allocated but persistent across eval, and
++//        only available during eval.
++//  * kTfLiteDynamic: Allocated during eval, or for string tensors.
++//  * kTfLitePersistentRo: Allocated and populated during prepare. This is
++//        useful for tensors that can be computed during prepare and treated
++//        as constant inputs for downstream ops (also in prepare).
++typedef enum TfLiteAllocationType {
++  kTfLiteMemNone = 0,
++  kTfLiteMmapRo,
++  kTfLiteArenaRw,
++  kTfLiteArenaRwPersistent,
++  kTfLiteDynamic,
++  kTfLitePersistentRo,
++} TfLiteAllocationType;
++
++// The delegates should use zero or positive integers to represent handles.
++// -1 is reserved from unallocated status.
++typedef int TfLiteBufferHandle;
++enum {
++  kTfLiteNullBufferHandle = -1,
++};
++
++// Storage format of each dimension in a sparse tensor.
++typedef enum TfLiteDimensionType {
++  kTfLiteDimDense = 0,
++  kTfLiteDimSparseCSR,
++} TfLiteDimensionType;
++
++// Metadata to encode each dimension in a sparse tensor.
++typedef struct TfLiteDimensionMetadata {
++  TfLiteDimensionType format;
++  int dense_size;
++  TfLiteIntArray* array_segments;
++  TfLiteIntArray* array_indices;
++} TfLiteDimensionMetadata;
++
++// Parameters used to encode a sparse tensor. For detailed explanation of each
++// field please refer to lite/schema/schema.fbs.
++typedef struct TfLiteSparsity {
++  TfLiteIntArray* traversal_order;
++  TfLiteIntArray* block_map;
++  TfLiteDimensionMetadata* dim_metadata;
++  int dim_metadata_size;
++} TfLiteSparsity;
++
++// An tensor in the interpreter system which is a wrapper around a buffer of
++// data including a dimensionality (or NULL if not currently defined).
++#ifndef TF_LITE_STATIC_MEMORY
++typedef struct TfLiteTensor {
++  // The data type specification for data stored in `data`. This affects
++  // what member of `data` union should be used.
++  TfLiteType type;
++  // A union of data pointers. The appropriate type should be used for a typed
++  // tensor based on `type`.
++  TfLitePtrUnion data;
++  // A pointer to a structure representing the dimensionality interpretation
++  // that the buffer should have. NOTE: the product of elements of `dims`
++  // and the element datatype size should be equal to `bytes` below.
++  TfLiteIntArray* dims;
++  // Quantization information.
++  TfLiteQuantizationParams params;
++  // How memory is mapped
++  //  kTfLiteMmapRo: Memory mapped read only.
++  //  i.e. weights
++  //  kTfLiteArenaRw: Arena allocated read write memory
++  //  (i.e. temporaries, outputs).
++  TfLiteAllocationType allocation_type;
++  // The number of bytes required to store the data of this Tensor. I.e.
++  // (bytes of each element) * dims[0] * ... * dims[n-1].  For example, if
++  // type is kTfLiteFloat32 and dims = {3, 2} then
++  // bytes = sizeof(float) * 3 * 2 = 4 * 3 * 2 = 24.
++  size_t bytes;
++
++  // An opaque pointer to a tflite::MMapAllocation
++  const void* allocation;
++
++  // Null-terminated name of this tensor.
++  const char* name;
++
++  // The delegate which knows how to handle `buffer_handle`.
++  // WARNING: This is an experimental interface that is subject to change.
++  struct TfLiteDelegate* delegate;
++
++  // An integer buffer handle that can be handled by `delegate`.
++  // The value is valid only when delegate is not null.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteBufferHandle buffer_handle;
++
++  // If the delegate uses its own buffer (e.g. GPU memory), the delegate is
++  // responsible to set data_is_stale to true.
++  // `delegate->CopyFromBufferHandle` can be called to copy the data from
++  // delegate buffer.
++  // WARNING: This is an // experimental interface that is subject to change.
++  bool data_is_stale;
++
++  // True if the tensor is a variable.
++  bool is_variable;
++
++  // Quantization information. Replaces params field above.
++  TfLiteQuantization quantization;
++
++  // Parameters used to encode a sparse tensor.
++  // This is optional. The field is NULL if a tensor is dense.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteSparsity* sparsity;
++
++  // Optional. Encodes shapes with unknown dimensions with -1. This field is
++  // only populated when unknown dimensions exist in a read-write tensor (i.e.
++  // an input or output tensor). (e.g.  `dims` contains [1, 1, 1, 3] and
++  // `dims_signature` contains [1, -1, -1, 3]).
++  const TfLiteIntArray* dims_signature;
++} TfLiteTensor;
++#else
++// Specific reduced TfLiteTensor struct for TF Micro runtime. This struct
++// contains only the minimum fields required to initialize and prepare a micro
++// inference graph. The fields in this struct have been ordered from
++// largest-to-smallest for optimal struct sizeof.
++//
++// NOTE: This flag is opt-in only at compile time.
++typedef struct TfLiteTensor {
++  // TODO(b/155784997): Consider consolidating these quantization fields:
++  // Quantization information. Replaces params field above.
++  TfLiteQuantization quantization;
++
++  // Quantization information.
++  TfLiteQuantizationParams params;
++
++  // A union of data pointers. The appropriate type should be used for a typed
++  // tensor based on `type`.
++  TfLitePtrUnion data;
++
++  // A pointer to a structure representing the dimensionality interpretation
++  // that the buffer should have. NOTE: the product of elements of `dims`
++  // and the element datatype size should be equal to `bytes` below.
++  TfLiteIntArray* dims;
++
++  // The number of bytes required to store the data of this Tensor. I.e.
++  // (bytes of each element) * dims[0] * ... * dims[n-1].  For example, if
++  // type is kTfLiteFloat32 and dims = {3, 2} then
++  // bytes = sizeof(float) * 3 * 2 = 4 * 3 * 2 = 24.
++  size_t bytes;
++
++  // The data type specification for data stored in `data`. This affects
++  // what member of `data` union should be used.
++  TfLiteType type;
++
++  // How memory is mapped
++  //  kTfLiteMmapRo: Memory mapped read only.
++  //  i.e. weights
++  //  kTfLiteArenaRw: Arena allocated read write memory
++  //  (i.e. temporaries, outputs).
++  TfLiteAllocationType allocation_type;
++
++  // True if the tensor is a variable.
++  bool is_variable;
++} TfLiteTensor;
++#endif  // TF_LITE_STATIC_MEMORY
++
++#ifndef TF_LITE_STATIC_MEMORY
++// Free data memory of tensor `t`.
++void TfLiteTensorDataFree(TfLiteTensor* t);
++
++// Free quantization data.
++void TfLiteQuantizationFree(TfLiteQuantization* quantization);
++
++// Free sparsity parameters.
++void TfLiteSparsityFree(TfLiteSparsity* sparsity);
++
++// Free memory of tensor `t`.
++void TfLiteTensorFree(TfLiteTensor* t);
++
++// Set all of a tensor's fields (and free any previously allocated data).
++void TfLiteTensorReset(TfLiteType type, const char* name, TfLiteIntArray* dims,
++                       TfLiteQuantizationParams quantization, char* buffer,
++                       size_t size, TfLiteAllocationType allocation_type,
++                       const void* allocation, bool is_variable,
++                       TfLiteTensor* tensor);
++
++// Resize the allocated data of a (dynamic) tensor. Tensors with allocation
++// types other than kTfLiteDynamic will be ignored.
++void TfLiteTensorRealloc(size_t num_bytes, TfLiteTensor* tensor);
++#endif  // TF_LITE_STATIC_MEMORY
++
++// A structure representing an instance of a node.
++// This structure only exhibits the inputs, outputs and user defined data, not
++// other features like the type.
++typedef struct TfLiteNode {
++  // Inputs to this node expressed as indices into the simulator's tensors.
++  TfLiteIntArray* inputs;
++
++  // Outputs to this node expressed as indices into the simulator's tensors.
++  TfLiteIntArray* outputs;
++
++  // intermediate tensors to this node expressed as indices into the simulator's
++  // tensors.
++  TfLiteIntArray* intermediates;
++
++  // Temporary tensors uses during the computations. This usually contains no
++  // tensors, but ops are allowed to change that if they need scratch space of
++  // any sort.
++  TfLiteIntArray* temporaries;
++
++  // Opaque data provided by the node implementer through `Registration.init`.
++  void* user_data;
++
++  // Opaque data provided to the node if the node is a builtin. This is usually
++  // a structure defined in builtin_op_data.h
++  void* builtin_data;
++
++  // Custom initial data. This is the opaque data provided in the flatbuffer.
++  // WARNING: This is an experimental interface that is subject to change.
++  const void* custom_initial_data;
++  int custom_initial_data_size;
++
++  // The pointer to the delegate. This is non-null only when the node is
++  // created by calling `interpreter.ModifyGraphWithDelegate`.
++  // WARNING: This is an experimental interface that is subject to change.
++  struct TfLiteDelegate* delegate;
++} TfLiteNode;
++
++// WARNING: This is an experimental interface that is subject to change.
++//
++// Currently, TfLiteDelegateParams has to be allocated in a way that it's
++// trivially destructable. It will be stored as `builtin_data` field in
++// `TfLiteNode` of the delegate node.
++//
++// See also the `CreateDelegateParams` function in `interpreter.cc` details.
++typedef struct TfLiteDelegateParams {
++  struct TfLiteDelegate* delegate;
++  TfLiteIntArray* nodes_to_replace;
++  TfLiteIntArray* input_tensors;
++  TfLiteIntArray* output_tensors;
++} TfLiteDelegateParams;
++
++typedef struct TfLiteContext {
++  // Number of tensors in the context.
++  size_t tensors_size;
++
++  // The execution plan contains a list of the node indices in execution
++  // order. execution_plan->size is the current number of nodes. And,
++  // execution_plan->data[0] is the first node that needs to be run.
++  // TfLiteDelegates can traverse the current execution plan by iterating
++  // through each member of this array and using GetNodeAndRegistration() to
++  // access details about a node. i.e.
++  // TfLiteIntArray* execution_plan;
++  // TF_LITE_ENSURE_STATUS(context->GetExecutionPlan(context, &execution_plan));
++  // for (int exec_index = 0; exec_index < execution_plan->size; exec_index++) {
++  //    int node_index = execution_plan->data[exec_index];
++  //    TfLiteNode* node;
++  //    TfLiteRegistration* reg;
++  //    context->GetNodeAndRegistration(context, node_index, &node, &reg);
++  // }
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*GetExecutionPlan)(struct TfLiteContext* context,
++                                   TfLiteIntArray** execution_plan);
++
++  // An array of tensors in the interpreter context (of length `tensors_size`)
++  TfLiteTensor* tensors;
++
++  // opaque full context ptr (an opaque c++ data structure)
++  void* impl_;
++
++  // Request memory pointer be resized. Updates dimensions on the tensor.
++  // NOTE: ResizeTensor takes ownership of newSize.
++  TfLiteStatus (*ResizeTensor)(struct TfLiteContext*, TfLiteTensor* tensor,
++                               TfLiteIntArray* new_size);
++  // Request that an error be reported with format string msg.
++  void (*ReportError)(struct TfLiteContext*, const char* msg, ...);
++
++  // Add `tensors_to_add` tensors, preserving pre-existing Tensor entries.  If
++  // non-null, the value pointed to by `first_new_tensor_index` will be set to
++  // the index of the first new tensor.
++  TfLiteStatus (*AddTensors)(struct TfLiteContext*, int tensors_to_add,
++                             int* first_new_tensor_index);
++
++  // Get a Tensor node by node_index.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*GetNodeAndRegistration)(
++      struct TfLiteContext*, int node_index, TfLiteNode** node,
++      struct TfLiteRegistration** registration);
++
++  // Replace ops with one or more stub delegate operations. This function
++  // does not take ownership of `nodes_to_replace`.
++  TfLiteStatus (*ReplaceNodeSubsetsWithDelegateKernels)(
++      struct TfLiteContext*, struct TfLiteRegistration registration,
++      const TfLiteIntArray* nodes_to_replace, struct TfLiteDelegate* delegate);
++
++  // Number of threads that are recommended to subsystems like gemmlowp and
++  // eigen.
++  int recommended_num_threads;
++
++  // Access external contexts by type.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteExternalContext* (*GetExternalContext)(struct TfLiteContext*,
++                                               TfLiteExternalContextType);
++  // Set the value of a external context. Does not take ownership of the
++  // pointer.
++  // WARNING: This is an experimental interface that is subject to change.
++  void (*SetExternalContext)(struct TfLiteContext*, TfLiteExternalContextType,
++                             TfLiteExternalContext*);
++
++  // Flag for allowing float16 precision for FP32 calculation.
++  // default: false.
++  // WARNING: This is an experimental API and subject to change.
++  bool allow_fp32_relax_to_fp16;
++
++  // Pointer to the op-level profiler, if set; nullptr otherwise.
++  void* profiler;
++
++  // Allocate persistent buffer which has the same life time as the interpreter.
++  // The memory is allocated from heap for TFL, and from tail in TFLM.
++  // If *ptr is not nullptr, the pointer will be reallocated.
++  // This method is only available in Prepare stage.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*AllocatePersistentBuffer)(struct TfLiteContext* ctx,
++                                           size_t bytes, void** ptr);
++
++  // Allocate a buffer which will be deallocated right after invoke phase.
++  // The memory is allocated from heap in TFL, and from volatile arena in TFLM.
++  // This method is only available in invoke stage.
++  // NOTE: If possible use RequestScratchBufferInArena method to avoid memory
++  // allocation during inference time.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*AllocateBufferForEval)(struct TfLiteContext* ctx, size_t bytes,
++                                        void** ptr);
++
++  // Request a scratch buffer in the arena through static memory planning.
++  // This method is only available in Prepare stage and the buffer is allocated
++  // by the interpreter between Prepare and Eval stage. In Eval stage,
++  // GetScratchBuffer API can be used to fetch the address.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*RequestScratchBufferInArena)(struct TfLiteContext* ctx,
++                                              size_t bytes, int* buffer_idx);
++
++  // Get the scratch buffer pointer.
++  // This method is only available in Eval stage.
++  // WARNING: This is an experimental interface that is subject to change.
++  void* (*GetScratchBuffer)(struct TfLiteContext* ctx, int buffer_idx);
++
++  // Resize the memory pointer of the `tensor`. This method behaves the same as
++  // `ResizeTensor`, except that it makes a copy of the shape array internally
++  // so the shape array could be deallocated right afterwards.
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*ResizeTensorExplicit)(struct TfLiteContext* ctx,
++                                       TfLiteTensor* tensor, int dims,
++                                       const int* shape);
++
++  // This method provides a preview of post-delegation partitioning. Each
++  // TfLiteDelegateParams in the referenced array corresponds to one instance of
++  // the delegate kernel.
++  // Example usage:
++  //
++  // TfLiteIntArray* nodes_to_replace = ...;
++  // TfLiteDelegateParams* params_array;
++  // int num_partitions = 0;
++  // TF_LITE_ENSURE_STATUS(context->PreviewDelegatePartitioning(
++  //    context, delegate, nodes_to_replace, &params_array, &num_partitions));
++  // for (int idx = 0; idx < num_partitions; idx++) {
++  //    const auto& partition_params = params_array[idx];
++  //    ...
++  // }
++  //
++  // NOTE: The context owns the memory referenced by partition_params_array. It
++  // will be cleared with another call to PreviewDelegateParitioning, or after
++  // TfLiteDelegateParams::Prepare returns.
++  //
++  // WARNING: This is an experimental interface that is subject to change.
++  TfLiteStatus (*PreviewDelegatePartitioning)(
++      struct TfLiteContext* context, const TfLiteIntArray* nodes_to_replace,
++      TfLiteDelegateParams** partition_params_array, int* num_partitions);
++} TfLiteContext;
++
++typedef struct TfLiteRegistration {
++  // Initializes the op from serialized data.
++  // If a built-in op:
++  //   `buffer` is the op's params data (TfLiteLSTMParams*).
++  //   `length` is zero.
++  // If custom op:
++  //   `buffer` is the op's `custom_options`.
++  //   `length` is the size of the buffer.
++  //
++  // Returns a type-punned (i.e. void*) opaque data (e.g. a primitive pointer
++  // or an instance of a struct).
++  //
++  // The returned pointer will be stored with the node in the `user_data` field,
++  // accessible within prepare and invoke functions below.
++  // NOTE: if the data is already in the desired format, simply implement this
++  // function to return `nullptr` and implement the free function to be a no-op.
++  void* (*init)(TfLiteContext* context, const char* buffer, size_t length);
++
++  // The pointer `buffer` is the data previously returned by an init invocation.
++  void (*free)(TfLiteContext* context, void* buffer);
++
++  // prepare is called when the inputs this node depends on have been resized.
++  // context->ResizeTensor() can be called to request output tensors to be
++  // resized.
++  //
++  // Returns kTfLiteOk on success.
++  TfLiteStatus (*prepare)(TfLiteContext* context, TfLiteNode* node);
++
++  // Execute the node (should read node->inputs and output to node->outputs).
++  // Returns kTfLiteOk on success.
++  TfLiteStatus (*invoke)(TfLiteContext* context, TfLiteNode* node);
++
++  // profiling_string is called during summarization of profiling information
++  // in order to group executions together. Providing a value here will cause a
++  // given op to appear multiple times is the profiling report. This is
++  // particularly useful for custom ops that can perform significantly
++  // different calculations depending on their `user-data`.
++  const char* (*profiling_string)(const TfLiteContext* context,
++                                  const TfLiteNode* node);
++
++  // Builtin codes. If this kernel refers to a builtin this is the code
++  // of the builtin. This is so we can do marshaling to other frameworks like
++  // NN API.
++  // Note: It is the responsibility of the registration binder to set this
++  // properly.
++  int32_t builtin_code;
++
++  // Custom op name. If the op is a builtin, this will be null.
++  // Note: It is the responsibility of the registration binder to set this
++  // properly.
++  // WARNING: This is an experimental interface that is subject to change.
++  const char* custom_name;
++
++  // The version of the op.
++  // Note: It is the responsibility of the registration binder to set this
++  // properly.
++  int version;
++} TfLiteRegistration;
++
++// The flags used in `TfLiteDelegate`. Note that this is a bitmask, so the
++// values should be 1, 2, 4, 8, ...etc.
++typedef enum TfLiteDelegateFlags {
++  kTfLiteDelegateFlagsNone = 0,
++  // The flag is set if the delegate can handle dynamic sized tensors.
++  // For example, the output shape of a `Resize` op with non-constant shape
++  // can only be inferred when the op is invoked.
++  // In this case, the Delegate is responsible for calling
++  // `SetTensorToDynamic` to mark the tensor as a dynamic tensor, and calling
++  // `ResizeTensor` when invoking the op.
++  //
++  // If the delegate isn't capable to handle dynamic tensors, this flag need
++  // to be set to false.
++  kTfLiteDelegateFlagsAllowDynamicTensors = 1
++} TfLiteDelegateFlags;
++
++// WARNING: This is an experimental interface that is subject to change.
++typedef struct TfLiteDelegate {
++  // Data that delegate needs to identify itself. This data is owned by the
++  // delegate. The delegate is owned in the user code, so the delegate is
++  // responsible for doing this when it is destroyed.
++  void* data_;
++
++  // Invoked by ModifyGraphWithDelegate. This prepare is called, giving the
++  // delegate a view of the current graph through TfLiteContext*. It typically
++  // will look at the nodes and call ReplaceNodeSubsetsWithDelegateKernels()
++  // to ask the TensorFlow lite runtime to create macro-nodes to represent
++  // delegated subgraphs of the original graph.
++  TfLiteStatus (*Prepare)(TfLiteContext* context,
++                          struct TfLiteDelegate* delegate);
++
++  // Copy the data from delegate buffer handle into raw memory of the given
++  // 'tensor'. Note that the delegate is allowed to allocate the raw bytes as
++  // long as it follows the rules for kTfLiteDynamic tensors, in which case this
++  // cannot be null.
++  TfLiteStatus (*CopyFromBufferHandle)(TfLiteContext* context,
++                                       struct TfLiteDelegate* delegate,
++                                       TfLiteBufferHandle buffer_handle,
++                                       TfLiteTensor* tensor);
++
++  // Copy the data from raw memory of the given 'tensor' to delegate buffer
++  // handle. This can be null if the delegate doesn't use its own buffer.
++  TfLiteStatus (*CopyToBufferHandle)(TfLiteContext* context,
++                                     struct TfLiteDelegate* delegate,
++                                     TfLiteBufferHandle buffer_handle,
++                                     TfLiteTensor* tensor);
++
++  // Free the Delegate Buffer Handle. Note: This only frees the handle, but
++  // this doesn't release the underlying resource (e.g. textures). The
++  // resources are either owned by application layer or the delegate.
++  // This can be null if the delegate doesn't use its own buffer.
++  void (*FreeBufferHandle)(TfLiteContext* context,
++                           struct TfLiteDelegate* delegate,
++                           TfLiteBufferHandle* handle);
++
++  // Bitmask flags. See the comments in `TfLiteDelegateFlags`.
++  int64_t flags;
++} TfLiteDelegate;
++
++// Build a 'null' delegate, with all the fields properly set to their default
++// values.
++TfLiteDelegate TfLiteDelegateCreate();
++
++#ifdef __cplusplus
++}  // extern "C"
++#endif  // __cplusplus
++#endif  // TENSORFLOW_LITE_C_COMMON_H_
+Index: ../../image_segmentation/android/app/src/main/res/layout/tfe_is_bottom_sheet_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/bottom_sheet\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:layout_margin=\"8dp\"\r\n    android:background=\"@drawable/rounded_edge\"\r\n    android:orientation=\"vertical\"\r\n    android:paddingTop=\"10dp\"\r\n    android:paddingBottom=\"16dp\"\r\n    app:behavior_hideable=\"false\"\r\n    app:behavior_peekHeight=\"36dp\"\r\n    app:layout_behavior=\"com.google.android.material.bottomsheet.BottomSheetBehavior\"\r\n    tools:showIn=\"@layout/tfe_is_activity_main\">\r\n\r\n    <ImageView\r\n        android:id=\"@+id/bottom_sheet_arrow\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:src=\"@drawable/icn_chevron_up\" />\r\n\r\n    <Switch\r\n        android:id=\"@+id/switch_use_gpu\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"8dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        android:text=\"@string/tfe_is_gpu\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/log_view\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textAppearance=\"@style/TextAppearance.AppCompat.Medium\"\r\n        android:padding=\"8dp\"\r\n        android:layout_marginStart=\"8dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        android:textColor=\"@android:color/black\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tfe_is_labels_found\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:padding=\"8dp\"\r\n        android:layout_marginStart=\"8dp\"\r\n        android:layout_marginEnd=\"8dp\"\r\n        android:text=\"@string/tfe_is_labels_found\" />\r\n\r\n    <com.google.android.material.chip.ChipGroup\r\n        android:id=\"@+id/chips_group\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_margin=\"16dp\"\r\n        app:chipSpacingVertical=\"4dp\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/rerun_button\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"center\"\r\n        android:padding=\"8dp\"\r\n        android:text=\"@string/tfe_is_re_run_model\" />\r\n\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../image_segmentation/android/app/src/main/res/layout/tfe_is_bottom_sheet_layout.xml	(revision 0913b85a5f9c87fb9fc07e393ee5193c16cc0837)
++++ ../../image_segmentation/android/app/src/main/res/layout/tfe_is_bottom_sheet_layout.xml	(date 1612501494114)
+@@ -17,7 +17,7 @@
+ 
+     <ImageView
+         android:id="@+id/bottom_sheet_arrow"
+-        android:layout_width="wrap_content"
++        android:layout_width="32dp"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:src="@drawable/icn_chevron_up" />
+Index: ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/builtin_ops.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/builtin_ops.h	(date 1612225029927)
++++ ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/builtin_ops.h	(date 1612225029927)
+@@ -0,0 +1,161 @@
++/* Copyright 2018 The TensorFlow Authors. All Rights Reserved.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++==============================================================================*/
++
++#ifndef TENSORFLOW_LITE_BUILTIN_OPS_H_
++#define TENSORFLOW_LITE_BUILTIN_OPS_H_
++
++// DO NOT EDIT MANUALLY: This file is automatically generated by
++// `schema/builtin_ops_header/generator.cc`.
++
++#ifdef __cplusplus
++extern "C" {
++#endif  // __cplusplus
++
++// The enum for builtin operators.
++// Note: CUSTOM and DELEGATE are 2 special ops which are not real built-in ops.
++typedef enum {
++  kTfLiteBuiltinAdd = 0,
++  kTfLiteBuiltinAveragePool2d = 1,
++  kTfLiteBuiltinConcatenation = 2,
++  kTfLiteBuiltinConv2d = 3,
++  kTfLiteBuiltinDepthwiseConv2d = 4,
++  kTfLiteBuiltinDepthToSpace = 5,
++  kTfLiteBuiltinDequantize = 6,
++  kTfLiteBuiltinEmbeddingLookup = 7,
++  kTfLiteBuiltinFloor = 8,
++  kTfLiteBuiltinFullyConnected = 9,
++  kTfLiteBuiltinHashtableLookup = 10,
++  kTfLiteBuiltinL2Normalization = 11,
++  kTfLiteBuiltinL2Pool2d = 12,
++  kTfLiteBuiltinLocalResponseNormalization = 13,
++  kTfLiteBuiltinLogistic = 14,
++  kTfLiteBuiltinLshProjection = 15,
++  kTfLiteBuiltinLstm = 16,
++  kTfLiteBuiltinMaxPool2d = 17,
++  kTfLiteBuiltinMul = 18,
++  kTfLiteBuiltinRelu = 19,
++  kTfLiteBuiltinReluN1To1 = 20,
++  kTfLiteBuiltinRelu6 = 21,
++  kTfLiteBuiltinReshape = 22,
++  kTfLiteBuiltinResizeBilinear = 23,
++  kTfLiteBuiltinRnn = 24,
++  kTfLiteBuiltinSoftmax = 25,
++  kTfLiteBuiltinSpaceToDepth = 26,
++  kTfLiteBuiltinSvdf = 27,
++  kTfLiteBuiltinTanh = 28,
++  kTfLiteBuiltinConcatEmbeddings = 29,
++  kTfLiteBuiltinSkipGram = 30,
++  kTfLiteBuiltinCall = 31,
++  kTfLiteBuiltinCustom = 32,
++  kTfLiteBuiltinEmbeddingLookupSparse = 33,
++  kTfLiteBuiltinPad = 34,
++  kTfLiteBuiltinUnidirectionalSequenceRnn = 35,
++  kTfLiteBuiltinGather = 36,
++  kTfLiteBuiltinBatchToSpaceNd = 37,
++  kTfLiteBuiltinSpaceToBatchNd = 38,
++  kTfLiteBuiltinTranspose = 39,
++  kTfLiteBuiltinMean = 40,
++  kTfLiteBuiltinSub = 41,
++  kTfLiteBuiltinDiv = 42,
++  kTfLiteBuiltinSqueeze = 43,
++  kTfLiteBuiltinUnidirectionalSequenceLstm = 44,
++  kTfLiteBuiltinStridedSlice = 45,
++  kTfLiteBuiltinBidirectionalSequenceRnn = 46,
++  kTfLiteBuiltinExp = 47,
++  kTfLiteBuiltinTopkV2 = 48,
++  kTfLiteBuiltinSplit = 49,
++  kTfLiteBuiltinLogSoftmax = 50,
++  kTfLiteBuiltinDelegate = 51,
++  kTfLiteBuiltinBidirectionalSequenceLstm = 52,
++  kTfLiteBuiltinCast = 53,
++  kTfLiteBuiltinPrelu = 54,
++  kTfLiteBuiltinMaximum = 55,
++  kTfLiteBuiltinArgMax = 56,
++  kTfLiteBuiltinMinimum = 57,
++  kTfLiteBuiltinLess = 58,
++  kTfLiteBuiltinNeg = 59,
++  kTfLiteBuiltinPadv2 = 60,
++  kTfLiteBuiltinGreater = 61,
++  kTfLiteBuiltinGreaterEqual = 62,
++  kTfLiteBuiltinLessEqual = 63,
++  kTfLiteBuiltinSelect = 64,
++  kTfLiteBuiltinSlice = 65,
++  kTfLiteBuiltinSin = 66,
++  kTfLiteBuiltinTransposeConv = 67,
++  kTfLiteBuiltinSparseToDense = 68,
++  kTfLiteBuiltinTile = 69,
++  kTfLiteBuiltinExpandDims = 70,
++  kTfLiteBuiltinEqual = 71,
++  kTfLiteBuiltinNotEqual = 72,
++  kTfLiteBuiltinLog = 73,
++  kTfLiteBuiltinSum = 74,
++  kTfLiteBuiltinSqrt = 75,
++  kTfLiteBuiltinRsqrt = 76,
++  kTfLiteBuiltinShape = 77,
++  kTfLiteBuiltinPow = 78,
++  kTfLiteBuiltinArgMin = 79,
++  kTfLiteBuiltinFakeQuant = 80,
++  kTfLiteBuiltinReduceProd = 81,
++  kTfLiteBuiltinReduceMax = 82,
++  kTfLiteBuiltinPack = 83,
++  kTfLiteBuiltinLogicalOr = 84,
++  kTfLiteBuiltinOneHot = 85,
++  kTfLiteBuiltinLogicalAnd = 86,
++  kTfLiteBuiltinLogicalNot = 87,
++  kTfLiteBuiltinUnpack = 88,
++  kTfLiteBuiltinReduceMin = 89,
++  kTfLiteBuiltinFloorDiv = 90,
++  kTfLiteBuiltinReduceAny = 91,
++  kTfLiteBuiltinSquare = 92,
++  kTfLiteBuiltinZerosLike = 93,
++  kTfLiteBuiltinFill = 94,
++  kTfLiteBuiltinFloorMod = 95,
++  kTfLiteBuiltinRange = 96,
++  kTfLiteBuiltinResizeNearestNeighbor = 97,
++  kTfLiteBuiltinLeakyRelu = 98,
++  kTfLiteBuiltinSquaredDifference = 99,
++  kTfLiteBuiltinMirrorPad = 100,
++  kTfLiteBuiltinAbs = 101,
++  kTfLiteBuiltinSplitV = 102,
++  kTfLiteBuiltinUnique = 103,
++  kTfLiteBuiltinCeil = 104,
++  kTfLiteBuiltinReverseV2 = 105,
++  kTfLiteBuiltinAddN = 106,
++  kTfLiteBuiltinGatherNd = 107,
++  kTfLiteBuiltinCos = 108,
++  kTfLiteBuiltinWhere = 109,
++  kTfLiteBuiltinRank = 110,
++  kTfLiteBuiltinElu = 111,
++  kTfLiteBuiltinReverseSequence = 112,
++  kTfLiteBuiltinMatrixDiag = 113,
++  kTfLiteBuiltinQuantize = 114,
++  kTfLiteBuiltinMatrixSetDiag = 115,
++  kTfLiteBuiltinRound = 116,
++  kTfLiteBuiltinHardSwish = 117,
++  kTfLiteBuiltinIf = 118,
++  kTfLiteBuiltinWhile = 119,
++  kTfLiteBuiltinNonMaxSuppressionV4 = 120,
++  kTfLiteBuiltinNonMaxSuppressionV5 = 121,
++  kTfLiteBuiltinScatterNd = 122,
++  kTfLiteBuiltinSelectV2 = 123,
++  kTfLiteBuiltinDensify = 124,
++  kTfLiteBuiltinSegmentSum = 125,
++  kTfLiteBuiltinBatchMatmul = 126,
++} TfLiteBuiltinOperator;
++
++#ifdef __cplusplus
++}  // extern "C"
++#endif  // __cplusplus
++#endif  // TENSORFLOW_LITE_BUILTIN_OPS_H_
+Index: ../../super_resolution/android/libraries/tensorflowlite-gpu/headers/tensorflow/lite/delegates/gpu/delegate.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../super_resolution/android/libraries/tensorflowlite-gpu/headers/tensorflow/lite/delegates/gpu/delegate.h	(date 1612225030161)
++++ ../../super_resolution/android/libraries/tensorflowlite-gpu/headers/tensorflow/lite/delegates/gpu/delegate.h	(date 1612225030161)
+@@ -0,0 +1,144 @@
++/* Copyright 2019 The TensorFlow Authors. All Rights Reserved.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++==============================================================================*/
++
++#ifndef TENSORFLOW_LITE_DELEGATES_GPU_DELEGATE_H_
++#define TENSORFLOW_LITE_DELEGATES_GPU_DELEGATE_H_
++
++#include <stdint.h>
++
++#include "tensorflow/lite/c/common.h"
++
++#ifdef SWIG
++#define TFL_CAPI_EXPORT
++#else
++#if defined(_WIN32)
++#ifdef TFL_COMPILE_LIBRARY
++#define TFL_CAPI_EXPORT __declspec(dllexport)
++#else
++#define TFL_CAPI_EXPORT __declspec(dllimport)
++#endif  // TFL_COMPILE_LIBRARY
++#else
++#define TFL_CAPI_EXPORT __attribute__((visibility("default")))
++#endif  // _WIN32
++#endif  // SWIG
++
++#ifdef __cplusplus
++extern "C" {
++#endif  // __cplusplus
++
++// Encapsulated compilation/runtime tradeoffs.
++enum TfLiteGpuInferenceUsage {
++  // Delegate will be used only once, therefore, bootstrap/init time should
++  // be taken into account.
++  TFLITE_GPU_INFERENCE_PREFERENCE_FAST_SINGLE_ANSWER = 0,
++
++  // Prefer maximizing the throughput. Same delegate will be used repeatedly on
++  // multiple inputs.
++  TFLITE_GPU_INFERENCE_PREFERENCE_SUSTAINED_SPEED = 1,
++};
++
++enum TfLiteGpuInferencePriority {
++  // AUTO priority is needed when a single priority is the most important
++  // factor. For example,
++  // priority1 = MIN_LATENCY would result in the configuration that achieves
++  // maximum performance.
++  TFLITE_GPU_INFERENCE_PRIORITY_AUTO = 0,
++  TFLITE_GPU_INFERENCE_PRIORITY_MAX_PRECISION = 1,
++  TFLITE_GPU_INFERENCE_PRIORITY_MIN_LATENCY = 2,
++  TFLITE_GPU_INFERENCE_PRIORITY_MIN_MEMORY_USAGE = 3,
++};
++
++// Used to toggle experimental flags used in the delegate. Note that this is a
++// bitmask, so the values should be 1, 2, 4, 8, ...etc.
++enum TfLiteGpuExperimentalFlags {
++  TFLITE_GPU_EXPERIMENTAL_FLAGS_NONE = 0,
++  // Enables inference on quantized models with the delegate.
++  TFLITE_GPU_EXPERIMENTAL_FLAGS_ENABLE_QUANT = 1 << 0,
++  // Enforces execution with the provided backend.
++  TFLITE_GPU_EXPERIMENTAL_FLAGS_CL_ONLY = 1 << 1,
++  TFLITE_GPU_EXPERIMENTAL_FLAGS_GL_ONLY = 1 << 2
++};
++
++// IMPORTANT: Always use TfLiteGpuDelegateOptionsV2Default() method to create
++// new instance of TfLiteGpuDelegateOptionsV2, otherwise every new added option
++// may break inference.
++typedef struct {
++  // When set to zero, computations are carried out in maximal possible
++  // precision. Otherwise, the GPU may quantify tensors, downcast values,
++  // process in FP16 to increase performance. For most models precision loss is
++  // warranted.
++  // [OBSOLETE]: to be removed
++  int32_t is_precision_loss_allowed;
++
++  // Preference is defined in TfLiteGpuInferenceUsage.
++  int32_t inference_preference;
++
++  // Ordered priorities provide better control over desired semantics,
++  // where priority(n) is more important than priority(n+1), therefore,
++  // each time inference engine needs to make a decision, it uses
++  // ordered priorities to do so.
++  // For example:
++  //   MAX_PRECISION at priority1 would not allow to decrease precision,
++  //   but moving it to priority2 or priority3 would result in F16 calculation.
++  //
++  // Priority is defined in TfLiteGpuInferencePriority.
++  // AUTO priority can only be used when higher priorities are fully specified.
++  // For example:
++  //   VALID:   priority1 = MIN_LATENCY, priority2 = AUTO, priority3 = AUTO
++  //   VALID:   priority1 = MIN_LATENCY, priority2 = MAX_PRECISION,
++  //            priority3 = AUTO
++  //   INVALID: priority1 = AUTO, priority2 = MIN_LATENCY, priority3 = AUTO
++  //   INVALID: priority1 = MIN_LATENCY, priority2 = AUTO,
++  //            priority3 = MAX_PRECISION
++  // Invalid priorities will result in error.
++  int32_t inference_priority1;
++  int32_t inference_priority2;
++  int32_t inference_priority3;
++
++  // Bitmask flags. See the comments in TfLiteGpuExperimentalFlags.
++  int64_t experimental_flags;
++
++  // A graph could have multiple partitions that can be delegated to the GPU.
++  // This limits the maximum number of partitions to be delegated. By default,
++  // it's set to 1 in TfLiteGpuDelegateOptionsV2Default().
++  int32_t max_delegated_partitions;
++} TfLiteGpuDelegateOptionsV2;
++
++// Populates TfLiteGpuDelegateOptionsV2 as follows:
++//   is_precision_loss_allowed = false
++//   inference_preference = TFLITE_GPU_INFERENCE_PREFERENCE_FAST_SINGLE_ANSWER
++//   priority1 = TFLITE_GPU_INFERENCE_PRIORITY_MAX_PRECISION
++//   priority2 = TFLITE_GPU_INFERENCE_PRIORITY_AUTO
++//   priority3 = TFLITE_GPU_INFERENCE_PRIORITY_AUTO
++TFL_CAPI_EXPORT TfLiteGpuDelegateOptionsV2 TfLiteGpuDelegateOptionsV2Default();
++
++// Creates a new delegate instance that need to be destroyed with
++// TfLiteGpuDelegateV2Delete when delegate is no longer used by TFLite.
++//
++// This delegate encapsulates multiple GPU-acceleration APIs under the hood to
++// make use of the fastest available on a device.
++//
++// When `options` is set to `nullptr`, then default options are used.
++TFL_CAPI_EXPORT TfLiteDelegate* TfLiteGpuDelegateV2Create(
++    const TfLiteGpuDelegateOptionsV2* options);
++
++// Destroys a delegate created with `TfLiteGpuDelegateV2Create` call.
++TFL_CAPI_EXPORT void TfLiteGpuDelegateV2Delete(TfLiteDelegate* delegate);
++
++#ifdef __cplusplus
++}
++#endif  // __cplusplus
++
++#endif  // TENSORFLOW_LITE_DELEGATES_GPU_DELEGATE_H_
+Index: ../../gesture_classification/android/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\n\r\nbuildscript {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n    dependencies {\r\n        classpath 'com.android.tools.build:gradle:4.0.0'\r\n        // NOTE: Do not place your application dependencies here; they belong\r\n        // in the individual module build.gradle files\r\n    }\r\n}\r\n\r\nallprojects {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../gesture_classification/android/build.gradle	(revision 0913b85a5f9c87fb9fc07e393ee5193c16cc0837)
++++ ../../gesture_classification/android/build.gradle	(date 1612225057506)
+@@ -6,7 +6,7 @@
+         jcenter()
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:4.0.0'
++        classpath 'com.android.tools.build:gradle:4.1.2'
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+     }
+Index: ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api_experimental.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api_experimental.h	(date 1612225029931)
++++ ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api_experimental.h	(date 1612225029931)
+@@ -0,0 +1,60 @@
++/* Copyright 2018 The TensorFlow Authors. All Rights Reserved.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++==============================================================================*/
++#ifndef TENSORFLOW_LITE_C_C_API_EXPERIMENTAL_H_
++#define TENSORFLOW_LITE_C_C_API_EXPERIMENTAL_H_
++
++#include "tensorflow/lite/builtin_ops.h"
++#include "tensorflow/lite/c/c_api.h"
++#include "tensorflow/lite/c/common.h"
++
++#ifdef __cplusplus
++extern "C" {
++#endif  // __cplusplus
++
++// Resets all variable tensors to zero.
++TFL_CAPI_EXPORT extern TfLiteStatus TfLiteInterpreterResetVariableTensors(
++    TfLiteInterpreter* interpreter);
++
++// Adds an op registration for a builtin operator.
++//
++// NOTE: The interpreter will make a copy of `registration` internally, so the
++// caller should ensure that its contents (function pointers, etc...) remain
++// valid for the duration of the interpreter's lifetime. A common practice is
++// making the provided TfLiteRegistration instance static.
++TFL_CAPI_EXPORT void TfLiteInterpreterOptionsAddBuiltinOp(
++    TfLiteInterpreterOptions* options, TfLiteBuiltinOperator op,
++    const TfLiteRegistration* registration, int32_t min_version,
++    int32_t max_version);
++
++// Adds an op registration for a custom operator.
++//
++// NOTE: The interpreter will make a copy of `registration` internally, so the
++// caller should ensure that its contents (function pointers, etc...) remain
++// valid for the duration of any created interpreter's lifetime. A common
++// practice is making the provided TfLiteRegistration instance static.
++TFL_CAPI_EXPORT void TfLiteInterpreterOptionsAddCustomOp(
++    TfLiteInterpreterOptions* options, const char* name,
++    const TfLiteRegistration* registration, int32_t min_version,
++    int32_t max_version);
++
++// Enable or disable the NN API for the interpreter (true to enable).
++TFL_CAPI_EXPORT extern void TfLiteInterpreterOptionsSetUseNNAPI(
++    TfLiteInterpreterOptions* options, bool enable);
++
++#ifdef __cplusplus
++}  // extern "C"
++#endif  // __cplusplus
++
++#endif  // TENSORFLOW_LITE_C_C_API_EXPERIMENTAL_H_
+Index: ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api.h	(date 1612225029929)
++++ ../../super_resolution/android/libraries/tensorflowlite/headers/tensorflow/lite/c/c_api.h	(date 1612225029929)
+@@ -0,0 +1,269 @@
++/* Copyright 2018 The TensorFlow Authors. All Rights Reserved.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++==============================================================================*/
++#ifndef TENSORFLOW_LITE_C_C_API_H_
++#define TENSORFLOW_LITE_C_C_API_H_
++
++#include <stdarg.h>
++#include <stdint.h>
++
++#include "common.h"
++
++// --------------------------------------------------------------------------
++/// C API for TensorFlow Lite.
++///
++/// The API leans towards simplicity and uniformity instead of convenience, as
++/// most usage will be by language-specific wrappers. It provides largely the
++/// same set of functionality as that of the C++ TensorFlow Lite `Interpreter`
++/// API, but is useful for shared libraries where having a stable ABI boundary
++/// is important.
++///
++/// Conventions:
++/// * We use the prefix TfLite for everything in the API.
++/// * size_t is used to represent byte sizes of objects that are
++///   materialized in the address space of the calling process.
++/// * int is used as an index into arrays.
++///
++/// Usage:
++/// <pre><code>
++/// // Create the model and interpreter options.
++/// TfLiteModel* model = TfLiteModelCreateFromFile("/path/to/model.tflite");
++/// TfLiteInterpreterOptions* options = TfLiteInterpreterOptionsCreate();
++/// TfLiteInterpreterOptionsSetNumThreads(options, 2);
++///
++/// // Create the interpreter.
++/// TfLiteInterpreter* interpreter = TfLiteInterpreterCreate(model, options);
++///
++/// // Allocate tensors and populate the input tensor data.
++/// TfLiteInterpreterAllocateTensors(interpreter);
++/// TfLiteTensor* input_tensor =
++///     TfLiteInterpreterGetInputTensor(interpreter, 0);
++/// TfLiteTensorCopyFromBuffer(input_tensor, input.data(),
++///                            input.size() * sizeof(float));
++///
++/// // Execute inference.
++/// TfLiteInterpreterInvoke(interpreter);
++///
++/// // Extract the output tensor data.
++/// const TfLiteTensor* output_tensor =
++//      TfLiteInterpreterGetOutputTensor(interpreter, 0);
++/// TfLiteTensorCopyToBuffer(output_tensor, output.data(),
++///                          output.size() * sizeof(float));
++///
++/// // Dispose of the model and interpreter objects.
++/// TfLiteInterpreterDelete(interpreter);
++/// TfLiteInterpreterOptionsDelete(options);
++/// TfLiteModelDelete(model);
++
++#ifdef SWIG
++#define TFL_CAPI_EXPORT
++#else
++#if defined(_WIN32)
++#ifdef TFL_COMPILE_LIBRARY
++#define TFL_CAPI_EXPORT __declspec(dllexport)
++#else
++#define TFL_CAPI_EXPORT __declspec(dllimport)
++#endif  // TFL_COMPILE_LIBRARY
++#else
++#define TFL_CAPI_EXPORT __attribute__((visibility("default")))
++#endif  // _WIN32
++#endif  // SWIG
++
++#ifdef __cplusplus
++extern "C" {
++#endif  // __cplusplus
++
++// --------------------------------------------------------------------------
++// TfLiteVersion returns a string describing version information of the
++// TensorFlow Lite library. TensorFlow Lite uses semantic versioning.
++TFL_CAPI_EXPORT extern const char* TfLiteVersion(void);
++
++// --------------------------------------------------------------------------
++// TfLiteModel wraps a loaded TensorFlow Lite model.
++typedef struct TfLiteModel TfLiteModel;
++
++// Returns a model from the provided buffer, or null on failure.
++TFL_CAPI_EXPORT extern TfLiteModel* TfLiteModelCreate(const void* model_data,
++                                                      size_t model_size);
++
++// Returns a model from the provided file, or null on failure.
++TFL_CAPI_EXPORT extern TfLiteModel* TfLiteModelCreateFromFile(
++    const char* model_path);
++
++// Destroys the model instance.
++TFL_CAPI_EXPORT extern void TfLiteModelDelete(TfLiteModel* model);
++
++// --------------------------------------------------------------------------
++// TfLiteInterpreterOptions allows customized interpreter configuration.
++typedef struct TfLiteInterpreterOptions TfLiteInterpreterOptions;
++
++// Returns a new interpreter options instances.
++TFL_CAPI_EXPORT extern TfLiteInterpreterOptions*
++TfLiteInterpreterOptionsCreate();
++
++// Destroys the interpreter options instance.
++TFL_CAPI_EXPORT extern void TfLiteInterpreterOptionsDelete(
++    TfLiteInterpreterOptions* options);
++
++// Sets the number of CPU threads to use for the interpreter.
++TFL_CAPI_EXPORT extern void TfLiteInterpreterOptionsSetNumThreads(
++    TfLiteInterpreterOptions* options, int32_t num_threads);
++
++// Adds a delegate to be applied during `TfLiteInterpreter` creation.
++//
++// If delegate application fails, interpreter creation will also fail with an
++// associated error logged.
++//
++// NOTE: The caller retains ownership of the delegate and should ensure that it
++// remains valid for the duration of any created interpreter's lifetime.
++TFL_CAPI_EXPORT extern void TfLiteInterpreterOptionsAddDelegate(
++    TfLiteInterpreterOptions* options, TfLiteDelegate* delegate);
++
++// Sets a custom error reporter for interpreter execution.
++//
++// * `reporter` takes the provided `user_data` object, as well as a C-style
++//   format string and arg list (see also vprintf).
++// * `user_data` is optional. If provided, it is owned by the client and must
++//   remain valid for the duration of the interpreter lifetime.
++TFL_CAPI_EXPORT extern void TfLiteInterpreterOptionsSetErrorReporter(
++    TfLiteInterpreterOptions* options,
++    void (*reporter)(void* user_data, const char* format, va_list args),
++    void* user_data);
++
++// --------------------------------------------------------------------------
++// TfLiteInterpreter provides inference from a provided model.
++typedef struct TfLiteInterpreter TfLiteInterpreter;
++
++// Returns a new interpreter using the provided model and options, or null on
++// failure.
++//
++// * `model` must be a valid model instance. The caller retains ownership of the
++//   object, and can destroy it immediately after creating the interpreter; the
++//   interpreter will maintain its own reference to the underlying model data.
++// * `optional_options` may be null. The caller retains ownership of the object,
++//   and can safely destroy it immediately after creating the interpreter.
++//
++// NOTE: The client *must* explicitly allocate tensors before attempting to
++// access input tensor data or invoke the interpreter.
++TFL_CAPI_EXPORT extern TfLiteInterpreter* TfLiteInterpreterCreate(
++    const TfLiteModel* model, const TfLiteInterpreterOptions* optional_options);
++
++// Destroys the interpreter.
++TFL_CAPI_EXPORT extern void TfLiteInterpreterDelete(
++    TfLiteInterpreter* interpreter);
++
++// Returns the number of input tensors associated with the model.
++TFL_CAPI_EXPORT extern int32_t TfLiteInterpreterGetInputTensorCount(
++    const TfLiteInterpreter* interpreter);
++
++// Returns the tensor associated with the input index.
++// REQUIRES: 0 <= input_index < TfLiteInterpreterGetInputTensorCount(tensor)
++TFL_CAPI_EXPORT extern TfLiteTensor* TfLiteInterpreterGetInputTensor(
++    const TfLiteInterpreter* interpreter, int32_t input_index);
++
++// Resizes the specified input tensor.
++//
++// NOTE: After a resize, the client *must* explicitly allocate tensors before
++// attempting to access the resized tensor data or invoke the interpreter.
++// REQUIRES: 0 <= input_index < TfLiteInterpreterGetInputTensorCount(tensor)
++TFL_CAPI_EXPORT extern TfLiteStatus TfLiteInterpreterResizeInputTensor(
++    TfLiteInterpreter* interpreter, int32_t input_index, const int* input_dims,
++    int32_t input_dims_size);
++
++// Updates allocations for all tensors, resizing dependent tensors using the
++// specified input tensor dimensionality.
++//
++// This is a relatively expensive operation, and need only be called after
++// creating the graph and/or resizing any inputs.
++TFL_CAPI_EXPORT extern TfLiteStatus TfLiteInterpreterAllocateTensors(
++    TfLiteInterpreter* interpreter);
++
++// Runs inference for the loaded graph.
++//
++// NOTE: It is possible that the interpreter is not in a ready state to
++// evaluate (e.g., if a ResizeInputTensor() has been performed without a call to
++// AllocateTensors()).
++TFL_CAPI_EXPORT extern TfLiteStatus TfLiteInterpreterInvoke(
++    TfLiteInterpreter* interpreter);
++
++// Returns the number of output tensors associated with the model.
++TFL_CAPI_EXPORT extern int32_t TfLiteInterpreterGetOutputTensorCount(
++    const TfLiteInterpreter* interpreter);
++
++// Returns the tensor associated with the output index.
++// REQUIRES: 0 <= input_index < TfLiteInterpreterGetOutputTensorCount(tensor)
++//
++// NOTE: The shape and underlying data buffer for output tensors may be not
++// be available until after the output tensor has been both sized and allocated.
++// In general, best practice is to interact with the output tensor *after*
++// calling TfLiteInterpreterInvoke().
++TFL_CAPI_EXPORT extern const TfLiteTensor* TfLiteInterpreterGetOutputTensor(
++    const TfLiteInterpreter* interpreter, int32_t output_index);
++
++// --------------------------------------------------------------------------
++// TfLiteTensor wraps data associated with a graph tensor.
++//
++// Note that, while the TfLiteTensor struct is not currently opaque, and its
++// fields can be accessed directly, these methods are still convenient for
++// language bindings. In the future the tensor struct will likely be made opaque
++// in the public API.
++
++// Returns the type of a tensor element.
++TFL_CAPI_EXPORT extern TfLiteType TfLiteTensorType(const TfLiteTensor* tensor);
++
++// Returns the number of dimensions that the tensor has.
++TFL_CAPI_EXPORT extern int32_t TfLiteTensorNumDims(const TfLiteTensor* tensor);
++
++// Returns the length of the tensor in the "dim_index" dimension.
++// REQUIRES: 0 <= dim_index < TFLiteTensorNumDims(tensor)
++TFL_CAPI_EXPORT extern int32_t TfLiteTensorDim(const TfLiteTensor* tensor,
++                                               int32_t dim_index);
++
++// Returns the size of the underlying data in bytes.
++TFL_CAPI_EXPORT extern size_t TfLiteTensorByteSize(const TfLiteTensor* tensor);
++
++// Returns a pointer to the underlying data buffer.
++//
++// NOTE: The result may be null if tensors have not yet been allocated, e.g.,
++// if the Tensor has just been created or resized and `TfLiteAllocateTensors()`
++// has yet to be called, or if the output tensor is dynamically sized and the
++// interpreter hasn't been invoked.
++TFL_CAPI_EXPORT extern void* TfLiteTensorData(const TfLiteTensor* tensor);
++
++// Returns the (null-terminated) name of the tensor.
++TFL_CAPI_EXPORT extern const char* TfLiteTensorName(const TfLiteTensor* tensor);
++
++// Returns the parameters for asymmetric quantization. The quantization
++// parameters are only valid when the tensor type is `kTfLiteUInt8` and the
++// `scale != 0`. Quantized values can be converted back to float using:
++//    real_value = scale * (quantized_value - zero_point);
++TFL_CAPI_EXPORT extern TfLiteQuantizationParams TfLiteTensorQuantizationParams(
++    const TfLiteTensor* tensor);
++
++// Copies from the provided input buffer into the tensor's buffer.
++// REQUIRES: input_data_size == TfLiteTensorByteSize(tensor)
++TFL_CAPI_EXPORT extern TfLiteStatus TfLiteTensorCopyFromBuffer(
++    TfLiteTensor* tensor, const void* input_data, size_t input_data_size);
++
++// Copies to the provided output buffer from the tensor's buffer.
++// REQUIRES: output_data_size == TfLiteTensorByteSize(tensor)
++TFL_CAPI_EXPORT extern TfLiteStatus TfLiteTensorCopyToBuffer(
++    const TfLiteTensor* output_tensor, void* output_data,
++    size_t output_data_size);
++
++#ifdef __cplusplus
++}  // extern "C"
++#endif  // __cplusplus
++
++#endif  // TENSORFLOW_LITE_C_C_API_H_

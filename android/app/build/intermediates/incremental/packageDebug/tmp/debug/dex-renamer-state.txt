@@ -1,0 +1,7 @@
+#Fri Feb 05 00:59:32 COT 2021
+base.0=C\:\\Users\\Christopher\\Desktop\\Seminarios\\examples\\lite\\examples\\style_transfer\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\Christopher\\Desktop\\Seminarios\\examples\\lite\\examples\\style_transfer\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
